@@ -13,11 +13,12 @@ M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>fF"] = { "<cmd>Telescope find_files hidden=true no_ignore=true<CR>", "Find Global [F]ile" },
-    ["<leader>fG"] = { global_grep, "Global Live [G]rep" },
+    ["<leader>fW"] = { global_grep, "Global Live Grep" },
     ["<C-h>"] = { "<cmd>TmuxNavigateLeft<CR>" },
     ["<C-j>"] = { "<cmd>TmuxNavigateDown<CR>" },
     ["<C-k>"] = { "<cmd>TmuxNavigateUp<CR>" },
     ["<C-l>"] = { "<cmd>TmuxNavigateRight<CR>" },
+    ["<leader>ds"] = { "<cmd>SymbolsOutline<CR>"},
   },
 
   v = {

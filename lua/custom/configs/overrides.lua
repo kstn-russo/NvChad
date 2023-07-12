@@ -42,6 +42,18 @@ M.mason = {
     -- php
     "phpactor",
     "pint",
+    "psalm",
+    "phpstan",
+    "phpmd",
+
+    -- json
+    "json-lsp",
+
+    -- yaml
+    "yaml-language-server",
+
+    -- common
+    "sonarlint-language-server",
   },
 }
 
