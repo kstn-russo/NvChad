@@ -11,7 +11,9 @@ local default_plugins = {
     "NvChad/base46",
     branch = "v2.0",
     build = function()
-      require("base46").load_all_highlights()
+      local base46 = require("base46")
+      base46.load_all_highlights()
+      base46.toggle_transparency()
     end,
   },
 
