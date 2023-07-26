@@ -9,6 +9,24 @@ local global_grep = function()
   }
 end
 
+local copy_to_register = function()
+    -- print(vim.fn.get_char)
+    local fn  = vim.fn
+    local c1 = fn.nr2char(fn.getchar())
+    local c2 = fn.nr2char(fn.getchar())
+    local s_allowed = function(s)
+        return string.match(s, "[0-9a-z*+\"-:.]")
+    end
+    if s_allowed(c1) and s_allowed(c2) then
+        -- print('Got from:'..c1..' to:'..c2)
+        vim.cmd("let @"..c1.."=@"..c2)
+
+    end
+    -- vim.cmd("let @a=@*"s
+end
+
+vim.keymap.set("n", "<leader>cr", copy_to_register)
+
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
